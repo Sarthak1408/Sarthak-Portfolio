@@ -9,7 +9,7 @@ const stats = [{
 }, {
     num: 8, text: "Technologies mastered",
 }, {
-    num: 500, text: "Code commits",
+    num: 1000, text: "Code commits",
 },]
 const Stats = () => {
     return (<section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
