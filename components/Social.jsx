@@ -1,11 +1,13 @@
 import Link from 'next/link';
-import {FaGithub, FaLinkedin, FaYoutube, FaTwitter} from "react-icons/fa";
+import {FaGithub, FaLinkedin} from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { SiLeetcode } from "react-icons/si";
 
 const socials = [
-    {icon: <FaGithub/>, path: ''},
-    {icon: <FaLinkedin/>, path: ''},
-    {icon: <FaYoutube/>, path: ''},
-    {icon: <FaTwitter/>, path: ''},
+    {icon: <FaGithub/>, path: 'https://github.com/Sarthak1408'},
+    {icon: <FaLinkedin/>, path: 'https://www.linkedin.com/in/sarthak-mathur1408/'},
+    {icon: <SiLeetcode/>, path: 'https://leetcode.com/u/sarthakmathur1408/'},
+    {icon: <BsTwitterX/>, path: 'https://x.com/SarthakMathur20'},
 ];
 
 const Social = ({containerStyles, iconStyles}) => {

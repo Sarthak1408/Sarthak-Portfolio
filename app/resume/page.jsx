@@ -1,16 +1,17 @@
 "use client";
 
-import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs} from "react-icons/fa";
-import {SiTailwindcss, SiNextdotjs} from "react-icons/si";
+import {FaJava, FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaAws, FaGitAlt, FaPython, FaDatabase, FaDocker} from "react-icons/fa";
+import {SiGooglecloud, SiNextdotjs, SiMongodb, SiKubernetes} from "react-icons/si";
 
 // about data
 const about = {
     title: "About me",
-    description: "skdjfvjsbrfjvbiajbfijvbjabsdcjv lkjabrjfpjab;kdkj vkjbasijudbvhjaslhjvblahdbvlha diihvbaihbfv",
+    description: "Hi, My name is Sarthak Mathur from Jamshedpur. I have completed my Master’s degree in Computer Applications from CHRIST (Deemed to be University). " +
+        "My interest are building new attentive and creative Web Technologies and Products with Modern JavaScript library and framework",
     info: [{
         fieldName: "Name", fieldValue: "Sarthak Mathur",
     }, {
-        fieldName: "Phone", fieldValue: "(+91) 9122 571 501",
+        fieldName: "Phone", fieldValue: "(+91) 91225-71501",
     }, {
         fieldName: "Experience", fieldValue: "Fresher",
     }, {
@@ -26,19 +27,17 @@ const about = {
 const experience = {
     icon: '/assets/resume/badge.svg',
     title: 'My Experience',
-    description: 'skdjfvjsbrfjvbiajbfijvbjabsdcjv lkjabrjfpjab;kdkj vkjbasijudbvhjaslhjvblahdbvlha diihvbaihbfv',
+    description: 'I am eager to contribute my fresh perspectives and enthusiasm to a dynamic team.',
     items: [{
-        company: "Maa Gyan Services", position: "Software Engineer Intern", duration: "March 2024 - Present",
-    }, {
-        company: "Maa Gyan Services", position: "Software Engineer Intern", duration: "March 2024 - Present",
-    },],
+        company: "Maa Gyan Services", position: "Software Engineer Intern", duration: "July 2024 - Present",
+    } ],
 };
 
 // education data
 const education = {
     icon: '/assets/resume/cap.svg',
     title: 'My Education',
-    description: 'skdjfvjsbrfjvbiajbfijvbjabsdcjv lkjabrjfpjab;kdkj vkjbasijudbvhjaslhjvblahdbvlha diihvbaihbfv',
+    description: 'My academic journey has equipped me with a strong foundation in programming languages, algorithms, and data structures.',
     items: [{
         institute: "CHRIST (Deemed to be University)",
         degree: "Master of Computer Application (MCA)",
@@ -46,7 +45,7 @@ const education = {
     }, {
         institute: "Birla Institute of Technology",
         degree: "Bachelor of Computer Application (BCA)",
-        duration: "July 2029 - May 2022",
+        duration: "July 2019 - May 2022",
     }, {
         institute: "Motilal Nehru Public School",
         degree: "12th Standard - ISC/ICSE",
@@ -61,26 +60,38 @@ const education = {
 // skills data
 const skills = {
     title: "My Skills",
-    description: "skdjfvjsbrfjvbiajbfijvbjabsdcjv lkjabrjfpjab;kdkj vkjbasijudbvhjaslhjvblahdbvlha diihvbaihbfv",
+    description: "I am enthusiastic about applying my knowledge and passion for technology to embark on a successful career. I am a fast learner and have always used this ability to fuel my inquisitiveness in finding and exploring new things.",
     skillList: [{
-        icons: <FaHtml5/>, name: "html 5",
+        icons: <FaJava/>, name: "java",
+    }, {
+        icons: <FaPython/>, name: "python",
+    }, {
+        icons: <FaHtml5/>, name: "HTML",
     }, {
         icons: <FaCss3/>, name: "css 3",
     }, {
         icons: <FaJs/>, name: "javascript",
+    },{
+        icons: <FaDatabase/>, name: "SQL Database",
+    }, {
+        icons: <SiMongodb/>, name: "MongoDB",
     }, {
         icons: <FaReact/>, name: "react.js",
     }, {
-        icons: <SiNextdotjs/>, name: "next.js",
-    }, {
-        icons: <SiTailwindcss/>, name: "tailwaind.css",
-    }, {
         icons: <FaNodeJs/>, name: "node.js",
     }, {
+        icons: <FaAws/>, name: "AWS Cloud",
+    }, {
+        icons: <SiGooglecloud/>, name: "Google Cloud",
+    }, {
+        icons: <FaDocker/>, name: "Docker",
+    }, {
+        icons: <SiKubernetes/>, name: "kubernetes",
+    }, {
+        icons: <FaGitAlt/>, name: "Git Bash",
+    },{
         icons: <FaFigma/>, name: "figma",
-    },
-
-    ],
+    }, ],
 };
 
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
@@ -93,10 +104,10 @@ const Resume = () => {
                         animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeIn"},}}
                         className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
         <div className="container mx-auto">
-            <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
+            <Tabs defaultValue="education" className="flex flex-col xl:flex-row gap-[60px]">
                 <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-                    <TabsTrigger value="experience">Experience</TabsTrigger>
                     <TabsTrigger value="education">Education</TabsTrigger>
+                    <TabsTrigger value="experience">Experience</TabsTrigger>
                     <TabsTrigger value="skills">Skill</TabsTrigger>
                     <TabsTrigger value="about">About me</TabsTrigger>
                 </TabsList>
@@ -108,7 +119,7 @@ const Resume = () => {
                     <TabsContent value="experience" className="w-full">
                         <div className="flex flex-col gap-[30px] text-center xl:text-left">
                             <h3 className="text-4xl font-bold">{experience.title}</h3>
-                            <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                            <p className="max-w-[700px] text-white/60 mx-auto xl:mx-0">
                                 {experience.description}
                             </p>
                             <ScrollArea className="h-[400px]">
@@ -161,7 +172,7 @@ const Resume = () => {
                         <div className="flex flex-col gap-[30px]">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <h3 className="text-4xl font-bold">{skills.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+                                <p className="max-w-[700px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
                             </div>
                             <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                                 {skills.skillList.map((skills, index) => {
